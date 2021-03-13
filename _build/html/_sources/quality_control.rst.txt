@@ -1,0 +1,24 @@
+.. _quality_control:
+
+***********************
+Quality control figures
+***********************
+
+This is my structure::
+
+     my_results
+        └── figures
+            └── my_recording
+                ├── my_recording__burstClassification
+                │   ├── my_recording__examplesOnMap_thisSOM.png
+                │   ├── my_recording__mapIds_to_ROIids.txt
+                │   └── my_recording__traceClassified_thisSOM.png
+                ├── my_recording__spikeDetection
+                │   ├── my_recording__ampDetection.png
+                │   ├── my_recording__detExamples.png
+                │   └── my_recording__FofThresh.png
+                └── my_recording__spikesorting
+                    ├── my_recording__clusterremoval_ncomp3.png
+                    ├── my_recording__fpRemoval_ex1.png
+                    ├── my_recording__fpRemoval_ex2.png
+                    └── my_recording__fpRemoval_ex3.png
