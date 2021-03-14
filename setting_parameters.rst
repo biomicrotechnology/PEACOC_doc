@@ -104,10 +104,10 @@ But first, let's create a directory where you can store all your specific parame
 Using *generate_ymlsetup* you can automatically generate the recording specific parameter file and
 set the recording id and source file from which to import the raw data (it basically does a find-replace for
 ``ANIMAL_BLOCK_ELECTRODE`` and ``THIS_SOURCE_FILE`` in your template).
-First, you enter the toolbox and call python or ipython:
+First, you enter the toolbox and call python or ipython::
 
-> cd PEACOC
-> ipython
+    > cd PEACOC
+    > ipython
 
 In python you can now generate your recording specific parameter file::
 

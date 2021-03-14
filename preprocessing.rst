@@ -20,7 +20,11 @@ The goal of this is to transfer obtain a resampled version of the raw data in hd
 
 Just run::
 
-    > python runthrough/rawToResampled.py run_params/my_recording_params.yml
+    > python PEACOC/runthrough/rawToResampled.py run_params/my_recording_params.yml
+
+My command line when resampling looks like this (the "(peacoc)" indicates that I work in the virtual enviroment "peacoc" )::
+
+    (peacoc) weltgeischt@heulsuse:~/PEACOC_tutorial> python PEACOC/runthrough/rawToResampled.py run_params/my_recording_params.yml
 
 Depending on what you put in your specific parameter file, loading and resampling either just run through :ref:`automatically <auto_load>`, which is nice when processing
 several recordings in a loop, or you can select the channel :ref:`interactively <interactive_load>`.
@@ -73,7 +77,7 @@ Assign polarity
 Polarity refers to the direction of the spike component in EA. To interactively determine and set the polarity of your
 recording, run the following command::
 
-    > python runthrough/polarityCheck.py run_params/my_recording_params.yml
+    > python PEACOC/runthrough/polarityCheck.py run_params/my_recording_params.yml
 
 Two windows will pop up: A LFP trace of the whole recording...
 
@@ -119,7 +123,7 @@ Detect artifacts
 
 To run the semi-automatic artifact detection, execute this::
 
-    > python runthrough/artifactCheck.py run_params/my_recording_params.yml
+    > python PEACOC/runthrough/artifactCheck.py run_params/my_recording_params.yml
 
 A window displaying the whole extent of the recording session will pop up. In it single events the algorithm detected
 as potential *saturation artifacts* are marked by ``red dots`` and potential *longer stretches of artifacts* are marked by ``purple lines``:

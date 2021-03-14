@@ -30,7 +30,7 @@ parameter file:
 
 Execute the spike detection and burst classification through the command-line::
 
-    > python runthrough/LFPtoBursts.py run_params/my_recording_params.yml
+    > python PEACOC/runthrough/LFPtoBursts.py run_params/my_recording_params.yml
 
 Now your PC may be busy for a few minutes (about 3 min for a 2h recording on an ok Laptop). If you chose not to use a GUI (interactive:False)
 nothing will pop up and you can skip forward to :ref:`output`:
