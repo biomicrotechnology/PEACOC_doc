@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Detecting epileptiform activity with PEACOC &#8212; PEACOC 1.0 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=0a676766" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Getting started" href="getting_started.html" /> 
@@ -37,15 +37,19 @@
     </div> 
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Detecting epileptiform activity with PEACOC</a></li>
 <li><a class="reference internal" href="#todolist">Todolist</a></li>
 </ul>
 
-  <h4>Next topic</h4>
-  <p class="topless"><a href="getting_started.html"
-                        title="next chapter">Getting started</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="getting_started.html"
+                          title="next chapter">Getting started</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -57,12 +61,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -71,8 +75,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="detecting-epileptiform-activity-with-peacoc">
-<h1>Detecting epileptiform activity with PEACOC<a class="headerlink" href="#detecting-epileptiform-activity-with-peacoc" title="Permalink to this headline">¶</a></h1>
+  <section id="detecting-epileptiform-activity-with-peacoc">
+<h1>Detecting epileptiform activity with PEACOC<a class="headerlink" href="#detecting-epileptiform-activity-with-peacoc" title="Permalink to this heading">¶</a></h1>
 <p>PEACOC stands for <strong>P</strong>atterns of <strong>E</strong>pileptiform <strong>A</strong>ctivity: a <strong>CO</strong>ntinuum-based <strong>C</strong>lassification.
 It is s a tool that allows you to automatically <strong>detected and classify epilepitiform activity (EA) patterns</strong>.
 It transforms a local field potential (LFP) recording into a sequence of classified spike bursts and solitary spikes.
@@ -99,14 +103,6 @@ run the <a class="reference internal" href="preprocessing.html#preprocessing"><s
 and <a class="reference internal" href="access_metadata.html#access-metadata"><span class="std std-ref">retrieve metadata and diagnostic metrics</span></a>.
 You can download the example data and the files successively generated in this tutorial from <em>here_</em>.
 If can also download a <em>pdf-version_</em> of this documentation.</p>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<ol class="arabic simple">
-<li><p>Make a link to Heining et al. 2021 once the paper is out.</p></li>
-<li><p>Make a link to the tutorial data file.</p></li>
-<li><p>Make a link to the pdf.</p></li>
-</ol>
-</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a><ul>
@@ -150,39 +146,10 @@ If can also download a <em>pdf-version_</em> of this documentation.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="todolist">
-<h1>Todolist<a class="headerlink" href="#todolist" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p>Link to the <em>paper_</em></p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="LFP_to_bursts.html#id2"><em>original entry</em></a> is located in /home/weltgeischt/workspace/PEACOC_doc/LFP_to_bursts.rst, line 57.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p><em>paper_</em> link</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="access_results.html#id1"><em>original entry</em></a> is located in /home/weltgeischt/workspace/PEACOC_doc/access_results.rst, line 103.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<ol class="arabic simple">
-<li><p>Make a link to Heining et al. 2021 once the paper is out.</p></li>
-<li><p>Make a link to the tutorial data file.</p></li>
-<li><p>Make a link to the pdf.</p></li>
-</ol>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="#id1"><em>original entry</em></a> is located in /home/weltgeischt/workspace/PEACOC_doc/index.rst, line 45.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p>Links for <em>paper_Figure XXX_</em> and <em>paper_</em>, in the whole section</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="output.html#id2"><em>original entry</em></a> is located in /home/weltgeischt/workspace/PEACOC_doc/output.rst, line 201.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
-<p>Make a link to <em>download this example .smr file_</em>.</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="setting_parameters.html#id2"><em>original entry</em></a> is located in /home/weltgeischt/workspace/PEACOC_doc/setting_parameters.rst, line 134.)</p>
-</div>
+</section>
+<section id="todolist">
+<h1>Todolist<a class="headerlink" href="#todolist" title="Permalink to this heading">¶</a></h1>
+</section>
 
 
             <div class="clearer"></div>
@@ -207,8 +174,8 @@ If can also download a <em>pdf-version_</em> of this documentation.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Katharina Heining.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    &#169; Copyright 2021, Katharina Heining.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

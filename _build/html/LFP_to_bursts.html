@@ -1,18 +1,18 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>EA detection and classification &#8212; PEACOC 1.0 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=0a676766" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Output" href="output.html" />
@@ -42,8 +42,9 @@
     </div> 
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">EA detection and classification</a><ul>
 <li><a class="reference internal" href="#spike-detection">Spike detection</a><ul>
 <li><a class="reference internal" href="#spectral-spike-detection-interactive">Spectral spike detection (interactive)</a></li>
@@ -55,12 +56,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="preprocessing.html"
-                        title="previous chapter">Preprocessing</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="output.html"
-                        title="next chapter">Output</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="preprocessing.html"
+                          title="previous chapter">Preprocessing</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="output.html"
+                          title="next chapter">Output</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -72,12 +78,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -86,8 +92,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="ea-detection-and-classification">
-<span id="lfp-to-bursts"></span><h1>EA detection and classification<a class="headerlink" href="#ea-detection-and-classification" title="Permalink to this headline">¶</a></h1>
+  <section id="ea-detection-and-classification">
+<span id="lfp-to-bursts"></span><h1>EA detection and classification<a class="headerlink" href="#ea-detection-and-classification" title="Permalink to this heading">¶</a></h1>
 <p>Spike detection and burst detection/classification are called with a single command. If you are not interested in bursts and
 prefer to just run the spike detection you can do so by excluding <cite>BurstClassificaton</cite> from the list of <cite>analysis:run</cite> in
 the parameter file at the template or recording specific level (see <a class="reference internal" href="setting_parameters.html#setting-parameters"><span class="std std-ref">Setting parameters</span></a>):</p>
@@ -106,20 +112,16 @@ parameter file:</p>
 </div>
 <p>Now your PC may be busy for a few minutes (about 3 min for a 2h recording on an ok Laptop). If you chose not to use a GUI (interactive:False)
 nothing will pop up and you can skip forward to <a class="reference internal" href="output.html#output"><span class="std std-ref">Output</span></a>:</p>
-<div class="section" id="spike-detection">
-<span id="id1"></span><h2>Spike detection<a class="headerlink" href="#spike-detection" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="spectral-spike-detection-interactive">
-<span id="spikes-spectral"></span><h3>Spectral spike detection (interactive)<a class="headerlink" href="#spectral-spike-detection-interactive" title="Permalink to this headline">¶</a></h3>
+<section id="spike-detection">
+<span id="id1"></span><h2>Spike detection<a class="headerlink" href="#spike-detection" title="Permalink to this heading">¶</a></h2>
+<section id="spectral-spike-detection-interactive">
+<span id="spikes-spectral"></span><h3>Spectral spike detection (interactive)<a class="headerlink" href="#spectral-spike-detection-interactive" title="Permalink to this heading">¶</a></h3>
 <p>Using the GUI for spectral spike detection (EdDetection:interactive:True in the parameter file) two windows will pop up.
 The first window shows <span class="math notranslate nohighlight">\(n(\theta)\)</span>, i.e. the number of spikes as a function of the spectral threshold.
 The two lines indicate what the algorithm interprets as sensible thresholds. By default, <cite>firstcross</cite> (the beginning
 of the plateau region, corresponding to <span class="math notranslate nohighlight">\(\theta_a\)</span> in the <em>paper_</em>)
 would be chosen, but also <cite>bump</cite> (the middle of the plateau, corresponding to <span class="math notranslate nohighlight">\(\theta_b\)</span>) might be a good choice.</p>
 <a class="reference internal image-reference" href="_images/threshdet_ntheta.png"><img alt="_images/threshdet_ntheta.png" class="align-center" src="_images/threshdet_ntheta.png" style="width: 500px;" /></a>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Link to the <em>paper_</em></p>
-</div>
 <p>The second window displays the <em>LFP</em> (bottom), the <em>normalized spectral sum</em> to which the threshold is applied (middle, thresholds
 shown as horizontal lines) and the <em>spikes detected</em> when applying the threshold (top).</p>
 <a class="reference internal image-reference" href="_images/threshdet_trace.png"><img alt="_images/threshdet_trace.png" class="align-center" src="_images/threshdet_trace.png" style="width: 700px;" /></a>
@@ -142,9 +144,9 @@ it will also show up in the second window, so you can judge its performance:</p>
 <p>I highly recommend to be rather liberal with the threshold at this stage, ie. opt for a rather low threshold such as
 <cite>firstcross</cite> and dont worry about some false positives. False positives will later be removed through <a class="reference internal" href="#spikesorting"><span class="std std-ref">Spike sorting (interactive)</span></a>.</p>
 </div>
-</div>
-<div class="section" id="spike-sorting-interactive">
-<span id="spikesorting"></span><h3>Spike sorting (interactive)<a class="headerlink" href="#spike-sorting-interactive" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="spike-sorting-interactive">
+<span id="spikesorting"></span><h3>Spike sorting (interactive)<a class="headerlink" href="#spike-sorting-interactive" title="Permalink to this heading">¶</a></h3>
 <p>With spike sorting we try to detect (and later remove) false positives through clustering waveforms.
 If you are in interactive mode for spike sorting (SpikeSorting:interactive:True in the parameter file), two more windows
 will pop up now. The panels of the first window show the clusters (waveforms of individual spikes as thin yellowish lines,
@@ -180,10 +182,10 @@ Likewise, the LFP trace will be annotated with spikes belonging to positive clus
 the zero line). By default the fifth cluster of both negative and positive clusters will be discarded. You can choose separately for
 for positive and negative clusters which clusters to discharge as false positives.</p>
 </div>
-</div>
-</div>
-<div class="section" id="burst-detection-and-classification">
-<span id="burst-classification"></span><h2>Burst detection and classification<a class="headerlink" href="#burst-detection-and-classification" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="burst-detection-and-classification">
+<span id="burst-classification"></span><h2>Burst detection and classification<a class="headerlink" href="#burst-detection-and-classification" title="Permalink to this heading">¶</a></h2>
 <p>The burst classification runs fully automatically by projecting detected spike bursts on a predefined <em>self-organizing map</em> (SOM). For the <em>intrahippocampal
 kainate mouse model</em> we once calculated a <strong>reference SOM</strong> on which we project all new datasets. This worked well so far and we included the reference SOM in
 the toolbox (path: <em>PEACOC/config/som.h5</em>).
@@ -192,8 +194,8 @@ To calculate the SOM itself we used the <a class="reference external" href="http
 Carrasco Kind and Brunner (“SOMz: photometric redshift PDFs with self-organizing maps and random atlas”, doi:10.1093/mnras/stt2456).
 You can use a your own SOM for the projection method by setting the path to your SOM in the parameter file:</p>
 <a class="reference internal image-reference" href="_images/SOM_path.png"><img alt="_images/SOM_path.png" class="align-center" src="_images/SOM_path.png" style="width: 500px;" /></a>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -221,8 +223,8 @@ You can use a your own SOM for the projection method by setting the path to your
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Katharina Heining.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    &#169; Copyright 2021, Katharina Heining.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Preprocessing &#8212; PEACOC 1.0 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=0a676766" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="EA detection and classification" href="LFP_to_bursts.html" />
@@ -41,8 +41,9 @@
     </div> 
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Preprocessing</a><ul>
 <li><a class="reference internal" href="#load-and-resample">Load and resample</a><ul>
 <li><a class="reference internal" href="#automatic-mode">Automatic mode</a></li>
@@ -55,12 +56,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="setting_parameters.html"
-                        title="previous chapter">Setting parameters</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="LFP_to_bursts.html"
-                        title="next chapter">EA detection and classification</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="setting_parameters.html"
+                          title="previous chapter">Setting parameters</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="LFP_to_bursts.html"
+                          title="next chapter">EA detection and classification</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -72,12 +78,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -86,14 +92,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="preprocessing">
-<span id="id1"></span><h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h1>
+  <section id="preprocessing">
+<span id="id1"></span><h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">¶</a></h1>
 <p>Both preprocessing and <a class="reference internal" href="LFP_to_bursts.html#lfp-to-bursts"><span class="std std-ref">EA detection and classification</span></a> work as a command line tool. The basic command structure is like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">codefile</span><span class="o">.</span><span class="n">py</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">paramfile</span><span class="o">.</span><span class="n">yml</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="load-and-resample">
-<span id="resample"></span><h2>Load and resample<a class="headerlink" href="#load-and-resample" title="Permalink to this headline">¶</a></h2>
+<section id="load-and-resample">
+<span id="resample"></span><h2>Load and resample<a class="headerlink" href="#load-and-resample" title="Permalink to this heading">¶</a></h2>
 <p>The goal of this is to transfer obtain a resampled version of the raw data in hdf5 format. To date the loading supports
 .smr and .edf files.</p>
 <p>Just run:</p>
@@ -106,13 +112,13 @@
 </div>
 <p>Depending on what you put in your specific parameter file, loading and resampling either just run through <a class="reference internal" href="#auto-load"><span class="std std-ref">automatically</span></a>, which is nice when processing
 several recordings in a loop, or you can select the channel <a class="reference internal" href="#interactive-load"><span class="std std-ref">interactively</span></a>.</p>
-<div class="section" id="automatic-mode">
-<span id="auto-load"></span><h3>Automatic mode<a class="headerlink" href="#automatic-mode" title="Permalink to this headline">¶</a></h3>
+<section id="automatic-mode">
+<span id="auto-load"></span><h3>Automatic mode<a class="headerlink" href="#automatic-mode" title="Permalink to this heading">¶</a></h3>
 <p>For this you need to know the channel you want to access and enter it directly in the parameter file:</p>
 <a class="reference internal image-reference" href="_images/resample_channel_params.png"><img alt="_images/resample_channel_params.png" class="align-center" src="_images/resample_channel_params.png" style="width: 500px;" /></a>
-</div>
-<div class="section" id="alternative-interactive-mode">
-<span id="interactive-load"></span><h3>Alternative: Interactive mode<a class="headerlink" href="#alternative-interactive-mode" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="alternative-interactive-mode">
+<span id="interactive-load"></span><h3>Alternative: Interactive mode<a class="headerlink" href="#alternative-interactive-mode" title="Permalink to this heading">¶</a></h3>
 <p>In case you do not know the channel name and want to select a channel interactively, <em>channel</em> should be set to <em>interactive</em>
 in the specific parameter file:</p>
 <a class="reference internal image-reference" href="_images/resample_interactive_params.png"><img alt="_images/resample_interactive_params.png" class="align-center" src="_images/resample_interactive_params.png" style="width: 500px;" /></a>
@@ -126,10 +132,10 @@ in, in case your analysis is not working properly):</p>
 <p>You can skip this loading and resampling routine and use your own resampled hdf5 file. Take care, however, to
 adhere to the format given in <em>PEACOC_tutorial/my_results/data/my_recording/my_recording__raw500.h5</em></p>
 </div>
-</div>
-</div>
-<div class="section" id="assign-polarity">
-<span id="polarity"></span><h2>Assign polarity<a class="headerlink" href="#assign-polarity" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="assign-polarity">
+<span id="polarity"></span><h2>Assign polarity<a class="headerlink" href="#assign-polarity" title="Permalink to this heading">¶</a></h2>
 <p>Polarity refers to the direction of the spike component in EA. To interactively determine and set the polarity of your
 recording, run the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">PEACOC</span><span class="o">/</span><span class="n">runthrough</span><span class="o">/</span><span class="n">polarityCheck</span><span class="o">.</span><span class="n">py</span> <span class="n">run_params</span><span class="o">/</span><span class="n">my_recording_params</span><span class="o">.</span><span class="n">yml</span>
@@ -153,9 +159,9 @@ at <em>PEACOC_tutorial/my_results/data/my_recording/my_recording__polarity.txt</
 do not need to follow the interactive routine to determine the polarity.  If the file <em>my_recording__polarity.txt</em> is not present,
 later analyses will assume default polarity (negative).</p>
 </div>
-</div>
-<div class="section" id="detect-artifacts">
-<span id="artifacts"></span><h2>Detect artifacts<a class="headerlink" href="#detect-artifacts" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="detect-artifacts">
+<span id="artifacts"></span><h2>Detect artifacts<a class="headerlink" href="#detect-artifacts" title="Permalink to this heading">¶</a></h2>
 <p>To run the semi-automatic artifact detection, execute this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">PEACOC</span><span class="o">/</span><span class="n">runthrough</span><span class="o">/</span><span class="n">artifactCheck</span><span class="o">.</span><span class="n">py</span> <span class="n">run_params</span><span class="o">/</span><span class="n">my_recording_params</span><span class="o">.</span><span class="n">yml</span>
 </pre></div>
@@ -199,8 +205,8 @@ when they appear to be peppered by artifacts.</p>
 <p>You can edit the file <em>my_recording__artifacts.txt</em> by hand or altogether avoid the interactive routine described here and create such a file yourself.
 If the file <em>my_recording__artifacts.txt</em> is not present, later analyses will assume that there are no artifacts.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -228,8 +234,8 @@ If the file <em>my_recording__artifacts.txt</em> is not present, later analyses 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Katharina Heining.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    &#169; Copyright 2021, Katharina Heining.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Setting parameters &#8212; PEACOC 1.0 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=0a676766" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Preprocessing" href="preprocessing.html" />
@@ -41,8 +41,9 @@
     </div> 
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Setting parameters</a><ul>
 <li><a class="reference internal" href="#how-parameters-are-handled">How parameters are handled</a></li>
 <li><a class="reference internal" href="#create-a-template">Create a template</a><ul>
@@ -54,12 +55,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="getting_started.html"
-                        title="previous chapter">Getting started</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="preprocessing.html"
-                        title="next chapter">Preprocessing</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="getting_started.html"
+                          title="previous chapter">Getting started</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="preprocessing.html"
+                          title="next chapter">Preprocessing</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -71,12 +77,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -85,10 +91,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="setting-parameters">
-<span id="id1"></span><h1>Setting parameters<a class="headerlink" href="#setting-parameters" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="how-parameters-are-handled">
-<span id="param-intro"></span><h2>How parameters are handled<a class="headerlink" href="#how-parameters-are-handled" title="Permalink to this headline">¶</a></h2>
+  <section id="setting-parameters">
+<span id="id1"></span><h1>Setting parameters<a class="headerlink" href="#setting-parameters" title="Permalink to this heading">¶</a></h1>
+<section id="how-parameters-are-handled">
+<span id="param-intro"></span><h2>How parameters are handled<a class="headerlink" href="#how-parameters-are-handled" title="Permalink to this heading">¶</a></h2>
 <p>Parameters are handled at two different levels. The <strong>default parameters</strong> are located at
 <em>PEACOC/config/configAnalysis.yml</em> and look like this:</p>
 <a class="reference internal image-reference" href="_images/configAnalysis.png"><img alt="_images/configAnalysis.png" class="align-center" src="_images/configAnalysis.png" style="width: 500px;" /></a>
@@ -97,9 +103,9 @@ Make a change to this file only if you are absolutely sure that you want this ch
 for all of your analyses. For now, leave it untouched.
 In the next sections we will create experiment and recording specific parameter files where you
 can overwrite the defaults.</p>
-</div>
-<div class="section" id="create-a-template">
-<span id="param-template"></span><h2>Create a template<a class="headerlink" href="#create-a-template" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="create-a-template">
+<span id="param-template"></span><h2>Create a template<a class="headerlink" href="#create-a-template" title="Permalink to this heading">¶</a></h2>
 <p>We found it very useful and time-saving to create parameter templates for whole experiments, i.e. a larger number of
 recordings to which the same parameters should be applied.
 To work with templates, first create a directory where you would like to store your templates:</p>
@@ -126,18 +132,18 @@ preferences:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">FIGDIR</span></code>: where you want the figures saved, e.g.: <code class="docutils literal notranslate"><span class="pre">home/weltgeischt/PEACOC_tutorial/my_results/figures</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">SOURCEDIR</span></code>: directory in which you keep your raw data files, e.g.: <code class="docutils literal notranslate"><span class="pre">home/weltgeischt/PEACOC_tutorial/example_data</span></code></p></li>
 </ul>
-<div class="section" id="overwriting-defaults">
-<span id="overwrite-defaults"></span><h3>Overwriting defaults<a class="headerlink" href="#overwriting-defaults" title="Permalink to this headline">¶</a></h3>
+<section id="overwriting-defaults">
+<span id="overwrite-defaults"></span><h3>Overwriting defaults<a class="headerlink" href="#overwriting-defaults" title="Permalink to this heading">¶</a></h3>
 <p>You can also overwrite default parameters at the template level. You do this by specifying the parameter as a sub-entry
 below <em>setparams</em> (red arrows in example below).
 Here we set the offset for spike detection (<em>EdDetection</em>, Ed for epileptiform discharge) to 300 s, i.e. we exclude
 the first 5 min of the recording from spike detection:</p>
 <a class="reference internal image-reference" href="_images/my_template_editParameters.png"><img alt="_images/my_template_editParameters.png" class="align-center" src="_images/my_template_editParameters.png" style="width: 500px;" /></a>
 <p>At this stage we have created a template for a big batch of recordings.</p>
-</div>
-</div>
-<div class="section" id="create-a-parameter-file-for-a-recording">
-<span id="param-rec"></span><h2>Create a parameter file for a recording<a class="headerlink" href="#create-a-parameter-file-for-a-recording" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="create-a-parameter-file-for-a-recording">
+<span id="param-rec"></span><h2>Create a parameter file for a recording<a class="headerlink" href="#create-a-parameter-file-for-a-recording" title="Permalink to this heading">¶</a></h2>
 <p>Now we will create a parameter file specific for a single recording session. This will be the input fort the commandline
 tool. Herey ou will learn how to generate a specific parameter file from the template and how edit it.
 But first, let’s create a directory where you can store all your specific parameter files:</p>
@@ -173,13 +179,9 @@ Et voilà, now you have created your recording specific parameter file at <em>ru
 <p>Have a look at <em>PEACOC/examples/generate_paramfile.py</em> for creating several parameter files
 in a loop.</p>
 </div>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Make a link to <em>download this example .smr file_</em>.</p>
-</div>
 <p><strong>Alternative</strong>: If you don’t like python, you can of course find/replace <code class="docutils literal notranslate"><span class="pre">ANIMAL_BLOCK_ELECTRODE</span></code> and <code class="docutils literal notranslate"><span class="pre">THIS_SOURCE_FILE</span></code> by hand too.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -207,8 +209,8 @@ in a loop.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Katharina Heining.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    &#169; Copyright 2021, Katharina Heining.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

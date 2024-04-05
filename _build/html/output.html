@@ -1,18 +1,18 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Output &#8212; PEACOC 1.0 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=0a676766" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Accessing results" href="access_results.html" />
@@ -42,8 +42,9 @@
     </div> 
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Output</a><ul>
 <li><a class="reference internal" href="#results-hdf5">Results (HDF5)</a></li>
 <li><a class="reference internal" href="#quality-control-figures">Quality control figures</a><ul>
@@ -56,12 +57,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="LFP_to_bursts.html"
-                        title="previous chapter">EA detection and classification</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="access_results.html"
-                        title="next chapter">Accessing results</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="LFP_to_bursts.html"
+                          title="previous chapter">EA detection and classification</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="access_results.html"
+                          title="next chapter">Accessing results</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -73,12 +79,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -87,8 +93,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="output">
-<span id="id1"></span><h1>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h1>
+  <section id="output">
+<span id="id1"></span><h1>Output<a class="headerlink" href="#output" title="Permalink to this heading">¶</a></h1>
 <p>During this analysis run the following folders and files were generated:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>my_results
 ├── data
@@ -117,8 +123,8 @@
 </div>
 <p>The exact location of the figure and data files depend on the location you entered when <a class="reference internal" href="setting_parameters.html#replacement-params"><span class="std std-ref">editing the parameter files</span></a>
 (specifically how you replaced <cite>DATADIR</cite> and <cite>FIGDIR</cite> in the template).</p>
-<div class="section" id="results-hdf5">
-<span id="resultshdf5"></span><h2>Results (HDF5)<a class="headerlink" href="#results-hdf5" title="Permalink to this headline">¶</a></h2>
+<section id="results-hdf5">
+<span id="resultshdf5"></span><h2>Results (HDF5)<a class="headerlink" href="#results-hdf5" title="Permalink to this heading">¶</a></h2>
 <p>The folder <em>my_results/data/my_recording</em> contains the results of the analyses, most importantly <em>my_recording__blipSpy.h5</em>.
 In this file all important results and intermediate steps (like the normalized averaged spectrogram) are stored.
 <em>my_recording__blipSpy.h5</em> looks like this:</p>
@@ -131,16 +137,16 @@ and a link to the raw_data contained in <em>my_recording__raw500.h5</em> (field 
 - <em>methods</em>, giving the parameters used for a particular analysis step</p>
 <p>You can either directly extract the data from these hdf5 files yourself (have a look at <a class="reference internal" href="access_results.html#direct-hdf5access"><span class="std std-ref">this</span></a> for inspiration),
 or use the <a class="reference internal" href="access_results.html#access-results"><span class="std std-ref">data handling tool</span></a> we provide to conveniently access and visualize results.</p>
-</div>
-<div class="section" id="quality-control-figures">
-<span id="quality-control"></span><h2>Quality control figures<a class="headerlink" href="#quality-control-figures" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="quality-control-figures">
+<span id="quality-control"></span><h2>Quality control figures<a class="headerlink" href="#quality-control-figures" title="Permalink to this heading">¶</a></h2>
 <p>To assess whether the algorithm performed sensibly, figures were created and saved in the folder <em>my_results/data/my_recording</em>.
 You can turn this off in the parameter file (<cite>analysis:save_figs: False</cite>) …</p>
 <a class="reference internal image-reference" href="_images/params_savefigs.png"><img alt="_images/params_savefigs.png" class="align-center" src="_images/params_savefigs.png" style="width: 350px;" /></a>
 <p>… but I highly recommend you keep saving these figures and routinely check them to see whether everything works well.
 In the following you will learn how to interpret these figures.</p>
-<div class="section" id="spike-detection">
-<h3>Spike detection<a class="headerlink" href="#spike-detection" title="Permalink to this headline">¶</a></h3>
+<section id="spike-detection">
+<h3>Spike detection<a class="headerlink" href="#spike-detection" title="Permalink to this heading">¶</a></h3>
 <p>The folder <strong>my_recording__spikeDetection</strong> contains three figure files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>my_recording__spikeDetection
  ├── my_recording__ampDetection.png
@@ -169,9 +175,9 @@ annotated by blue and red ticks respectively. Regions <a class="reference intern
 <p>Because there were so few amplitude spikes (i.e. spectral spike detection did a good job), we dont see any red ticks here.
 But we notice some false positives, eg. in the first and second row. Luckily these were probably removed by
 <a class="reference internal" href="LFP_to_bursts.html#spikesorting"><span class="std std-ref">spike sorting</span></a>.</p>
-</div>
-<div class="section" id="spike-sorting">
-<h3>Spike sorting<a class="headerlink" href="#spike-sorting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="spike-sorting">
+<h3>Spike sorting<a class="headerlink" href="#spike-sorting" title="Permalink to this heading">¶</a></h3>
 <p>The folder <strong>my_recording__spikesorting</strong> contains one file again displaying the spike clusters and three figures
 of LFP traces annoted with putative false positives detected through spike sorting:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>my_recording__spikesorting
@@ -199,9 +205,9 @@ with the performance, most false positives appear to have been detected. If you 
 in these example figures, you might need to <a class="reference internal" href="LFP_to_bursts.html#spikes-spectral"><span class="std std-ref">change the threshold for spectral spike detection</span></a>
 or <a class="reference internal" href="LFP_to_bursts.html#spikesorting"><span class="std std-ref">exclude more/different clusters</span></a>. Likewise, if you observed too many false negatives or spikes being wrong-
 fully labeled false positives here.</p>
-</div>
-<div class="section" id="burst-classification">
-<h3>Burst classification<a class="headerlink" href="#burst-classification" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="burst-classification">
+<h3>Burst classification<a class="headerlink" href="#burst-classification" title="Permalink to this heading">¶</a></h3>
 <p>The folder <strong>my_recording__burstClassification</strong> contains two figures related to burst classification:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>my_recording__burstClassification
    ├── my_recording__examplesOnMap_thisSOM.png
@@ -225,13 +231,9 @@ The category <cite>low-load</cite> in the <em>paper_</em> comprises all <cite>XS
 on the SOM) and <cite>S</cite> (low-load bursts classified through the SOM) bursts shown here. The <cite>medium-load</cite> bursts are category
 <cite>M</cite> and the category <cite>high-load</cite> comprises all <cite>L</cite> (=`high-load2`) and <cite>XL</cite> (=`high-load1`) bursts:</p>
 <a class="reference internal image-reference" href="_images/my_recording__traceClassified_thisSOM.png"><img alt="_images/my_recording__traceClassified_thisSOM.png" class="align-center" src="_images/my_recording__traceClassified_thisSOM.png" style="width: 750px;" /></a>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Links for <em>paper_Figure XXX_</em> and <em>paper_</em>, in the whole section</p>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -259,8 +261,8 @@ on the SOM) and <cite>S</cite> (low-load bursts classified through the SOM) burs
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Katharina Heining.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    &#169; Copyright 2021, Katharina Heining.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

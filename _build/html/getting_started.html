@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Getting started &#8212; PEACOC 1.0 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=0a676766" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=359c27e9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Setting parameters" href="setting_parameters.html" />
@@ -41,8 +41,9 @@
     </div> 
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Getting started</a><ul>
 <li><a class="reference internal" href="#download-the-toolbox">Download the toolbox</a><ul>
 <li><a class="reference internal" href="#using-git">Using git</a><ul>
@@ -58,12 +59,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Detecting epileptiform activity with PEACOC</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="setting_parameters.html"
-                        title="next chapter">Setting parameters</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Detecting epileptiform activity with PEACOC</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="setting_parameters.html"
+                          title="next chapter">Setting parameters</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -75,12 +81,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -89,12 +95,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="getting-started">
-<span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="download-the-toolbox">
-<span id="download"></span><h2>Download the toolbox<a class="headerlink" href="#download-the-toolbox" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-git">
-<span id="download-git"></span><h3>Using git<a class="headerlink" href="#using-git" title="Permalink to this headline">¶</a></h3>
+  <section id="getting-started">
+<span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h1>
+<section id="download-the-toolbox">
+<span id="download"></span><h2>Download the toolbox<a class="headerlink" href="#download-the-toolbox" title="Permalink to this heading">¶</a></h2>
+<section id="using-git">
+<span id="download-git"></span><h3>Using git<a class="headerlink" href="#using-git" title="Permalink to this heading">¶</a></h3>
 <p>Navigate to where you want to store the toolbox. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">cd</span> <span class="n">PEACOC_tutorial</span><span class="o">/</span>
 </pre></div>
@@ -115,8 +121,8 @@
 </div>
 <p>Now you have a sub-folder called <em>PEACOC</em> in the directory where you executed git clone.
 <em>PEACOC</em> contains all the code.</p>
-<div class="section" id="updating-to-a-newer-version">
-<span id="update-git"></span><h4>Updating to a newer version<a class="headerlink" href="#updating-to-a-newer-version" title="Permalink to this headline">¶</a></h4>
+<section id="updating-to-a-newer-version">
+<span id="update-git"></span><h4>Updating to a newer version<a class="headerlink" href="#updating-to-a-newer-version" title="Permalink to this heading">¶</a></h4>
 <p>You can later update the toolbox to its newest version using git.
 Navigate to the toolbox directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">cd</span> <span class="n">PEACOC</span>
@@ -127,16 +133,16 @@ Navigate to the toolbox directory:</p>
 </pre></div>
 </div>
 <p>But for now, let’s stay one level above the folder <em>PEACOC</em>.</p>
-</div>
-</div>
-<div class="section" id="alternative-download-archive">
-<span id="download-zip"></span><h3>Alternative: download archive<a class="headerlink" href="#alternative-download-archive" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="alternative-download-archive">
+<span id="download-zip"></span><h3>Alternative: download archive<a class="headerlink" href="#alternative-download-archive" title="Permalink to this heading">¶</a></h3>
 <p>If you do not want to use git, you can also download the <a class="reference external" href="https://github.com/biomicrotechnology/PEACOC/archive/master.zip">zip archive</a> from github.
 Extract this to a place where you want to store the toolbox.</p>
-</div>
-</div>
-<div class="section" id="set-up-a-virtual-environment-recommended">
-<span id="virtual-env"></span><h2>Set up a virtual environment (recommended)<a class="headerlink" href="#set-up-a-virtual-environment-recommended" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="set-up-a-virtual-environment-recommended">
+<span id="virtual-env"></span><h2>Set up a virtual environment (recommended)<a class="headerlink" href="#set-up-a-virtual-environment-recommended" title="Permalink to this heading">¶</a></h2>
 <p>I strongly recommened installing all requirements for <em>PEACOC</em> in a new virtual environment and always run the program from there.
 This keeps all dependencies nice and tidy and prevents that stuff does not work anymore due to an annoying update.
 Here is how to set up a virtual environment.
@@ -161,9 +167,9 @@ To use virtual environments, use this command on Linux:</p>
 </pre></div>
 </div>
 <p>But for now, let’s stay in <em>peacoc</em>.</p>
-</div>
-<div class="section" id="install-requirements">
-<span id="requirements"></span><h2>Install requirements<a class="headerlink" href="#install-requirements" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="install-requirements">
+<span id="requirements"></span><h2>Install requirements<a class="headerlink" href="#install-requirements" title="Permalink to this heading">¶</a></h2>
 <p>If you do not have python 3 (code also works with python version &gt;=2.5) and pip 3 on your computer.
 You can find instructions about how to install these two at <a class="reference external" href="https://realpython.com/installing-python/">python</a> and <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a>.</p>
 <p>If you decided to use a virtual environment for EA detection, make sure you are in it:</p>
@@ -174,8 +180,8 @@ You can find instructions about how to install these two at <a class="reference 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">PEACOC</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -203,8 +209,8 @@ You can find instructions about how to install these two at <a class="reference 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, Katharina Heining.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.2.
+    &#169; Copyright 2021, Katharina Heining.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

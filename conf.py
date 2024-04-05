@@ -191,4 +191,5 @@ epub_exclude_files = ['search.html']
 # -- Options for todo extension ----------------------------------------------
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
+### TODO: INCLUDE IT AGAIN!
+#todo_include_todos = True
